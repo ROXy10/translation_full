@@ -29,17 +29,121 @@ body textarea:required:valid
 html, body
 	height: 100%
 
+a
+    text-decoration: none
+    color: $color-sup
+    font-family: $avignon-book
+    @include transition
+    &:hover, &:focus
+        text-decoration: none
+        color: $color-main
+
 body
 	font-size: 16px
 	min-width: 320px
 	position: relative
 	line-height: 1.75
-	font-family: $default-font
+	font-family: $helios-regular
 	overflow-x: hidden
+    background-color: $color-background
 
 .img-responsive
 	display: block
 	max-width: 100%
 	height: auto
 
-@import "media" // Всегда в конце
+.btn
+    display: inline-block
+    cursor: pointer
+    padding: 6px 14px
+    text-align: center
+    color: rgb(255, 255, 255)
+    border-radius: 5.1px
+    &--green
+        border: 1px solid rgba(21, 146, 117, 0.2)
+        background-color: $color-sup
+        &:hover, &:focus
+            background-color: rgba(21, 146, 117, 0.8)
+            color: rgb(255, 255, 255)
+    &--orange
+        border: 1px solid rgba(255, 133, 50, 0.2)
+        background-color: $color-main
+        &:hover, &:focus
+            background-color: rgba(255, 133, 50, 0.8)
+            color: rgb(255, 255, 255)
+
+.header
+    border-top: 3px solid $color-main
+    padding: 21px 0 36px 0
+    &__navbar
+        &-brand
+            position: relative
+            font-size: 2.125em
+            line-height: 1
+            &-circle-green
+                position: absolute
+                left: 35px
+                top: 10px
+                width: 32px
+                height: 32px
+                display: inline-block
+                border-radius: 50%
+                background-color: $color-sup
+            &-circle-orange
+                position: absolute
+                left: 57px
+                top: 5px
+                width: 40px
+                height: 40px
+                display: inline-block
+                border-radius: 50%
+                background-color: $color-main
+            &-text
+                margin-left: 116px
+                color: rgb(0, 0, 0)
+                border-bottom: 2px solid
+        &-auth
+            margin-top: 1px
+            font-size: 0.875em
+            &-btn
+                position: relative
+                margin: 0 9px
+                font-family: $helios-regular
+                &--left
+                    padding-left: 57px
+            &-icon
+                position: absolute
+                height: 36px
+                left: 13px
+                top: 0
+                background: none
+                font-size: 1.625em
+        &-search
+            position: relative
+            width: 300px
+            margin: 0 auto
+            &-input
+                width: 100%
+                height: 38px
+                padding-left: 10px
+                border: 1px solid rgb(189, 189, 189)
+                border-radius: 5px
+                outline: none
+                background: rgb(255, 255, 255)
+                color: rgb(189, 189, 189)
+                @include placeholder
+            &-btn
+                position: absolute
+                top: 0
+                right: 0px
+                width: 38px
+                height: 38px
+                border-radius: 0 5px 5px 0
+                border: 1px solid rgb(189, 189, 189)
+                cursor: pointer
+                color: $color-sup
+                font-size: 1.375em
+                line-height: 1
+                letter-spacing: 0
+                @include gradient
+@import "media"
