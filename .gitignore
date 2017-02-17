@@ -77,5 +77,6 @@ jspm_packages
 
 /dist/
 /app/css/
+.idea
 
 
