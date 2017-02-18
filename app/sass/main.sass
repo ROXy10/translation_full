@@ -83,7 +83,7 @@ body
             &-circle-green
                 position: absolute
                 left: 35px
-                top: 10px
+                top: 4px
                 width: 32px
                 height: 32px
                 display: inline-block
@@ -92,17 +92,20 @@ body
             &-circle-orange
                 position: absolute
                 left: 57px
-                top: 5px
+                top: 0
                 width: 40px
                 height: 40px
                 display: inline-block
                 border-radius: 50%
                 background-color: $color-main
             &-text
+                display: inline-block
                 margin-left: 116px
                 color: rgb(0, 0, 0)
+                padding-bottom: 4px
                 border-bottom: 2px solid
         &-auth
+            text-align: center
             margin-top: 1px
             font-size: 0.875em
             &-btn
@@ -118,32 +121,41 @@ body
                 top: 0
                 background: none
                 font-size: 1.625em
+        &-btn-small
+            display: none
         &-search
             position: relative
             width: 300px
-            margin: 0 auto
+            float: right
             &-input
-                width: 100%
+                display: inline-block
+                width: 300px
                 height: 38px
                 padding-left: 10px
-                border: 1px solid rgb(189, 189, 189)
+                border: 2px solid rgb(189, 189, 189)
                 border-radius: 5px
                 outline: none
                 background: rgb(255, 255, 255)
                 color: rgb(189, 189, 189)
+                transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000)
                 @include placeholder
             &-btn
+                outline: none
                 position: absolute
                 top: 0
-                right: 0px
+                right: 0
                 width: 38px
                 height: 38px
                 border-radius: 0 5px 5px 0
-                border: 1px solid rgb(189, 189, 189)
+                border: 2px solid rgb(189, 189, 189)
                 cursor: pointer
                 color: $color-sup
                 font-size: 1.375em
                 line-height: 1
                 letter-spacing: 0
+                padding: 0
                 @include gradient
+                &:hover, &:focus
+                    color: $color-main
+                    opacity: 0.8
 @import "media"

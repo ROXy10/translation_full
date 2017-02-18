@@ -3,6 +3,7 @@
 $helios-regular: "helios-regular", sans-serif
 $avignon-book: "avignon-book", sans-serif
 $roboto-regular: "roboto-regular", sans-serif
+$font-icons: 'font-icons', $helios-regular
 $color-main: rgb(255, 133, 50)
 $color-background: rgb(230, 230, 230)
 $color-sup: rgb(21, 146, 117)
@@ -33,6 +34,25 @@ $color-text-sup: rgb(127, 127, 127)
         color: #c0d3cd /* Firefox 18- */
     &:-ms-input-placeholder
         color: #c0d3cd
+
+@mixin placeholder_visible
+    &:focus::-webkit-input-placeholder
+        color: #c0d3cd
+    &:focus::-moz-placeholder
+        color: #c0d3cd
+    &:focus:-moz-placeholder
+        color: #c0d3cd
+    &:focus:-ms-input-placeholder
+        color: #c0d3cd
+    &::-webkit-input-placeholder
+        color: #c0d3cd
+    &::-moz-placeholder
+        color: #c0d3cd /* Firefox 19+ */
+    &:-moz-placeholder
+        color: #c0d3cd /* Firefox 18- */
+    &:-ms-input-placeholder
+        color: #c0d3cd
+
 
 @mixin gradient
     background-color: rgb(255, 255, 255)

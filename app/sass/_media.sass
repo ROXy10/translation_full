@@ -10,8 +10,55 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
-	/**/
-
+	.header
+        &__navbar
+            position: relative
+            &-brand
+                &-circle-green
+                    left: 0px
+                &-circle-orange
+                    left: 22px
+                &-text
+                    margin-left: 66px
+            &-auth
+                display: none
+            &-btn
+                &-small
+                    display: inline-block
+                    position: absolute
+                    padding: 0
+                    width: 38px
+                    height: 38px
+                    font-size: 1.375em
+                &--post
+                    top: 1px
+                    right: 105px
+                &--login
+                    top: 1px
+                    right: 60px
+            &-search
+                display: inline-block
+                position: relative
+                &-input
+                    padding-right: 25px
+                    width: 38px
+                    height: 38px
+                    position: absolute
+                    top: 1px
+                    right: 0
+                    z-index: 3
+                    background-image: url("../img/search.svg")
+                    background-position: 7px
+                    background-repeat: no-repeat
+                    background-size: 22px 22px
+                    @include placeholder_visible
+                    &:focus
+                        width: 100%
+                        background-position: 267px
+                        border-bottom: 1px solid #BBB
+                        cursor: text
+                &-btn
+                    display: none
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
