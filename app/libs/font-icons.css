@@ -54,15 +54,16 @@
   /* Uncomment for 3D effect */
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
- 
+
 .icon-search:before { content: '\e800'; } /* '' */
 .icon-ok:before { content: '\e801'; } /* '' */
 .icon-chat:before { content: '\e802'; } /* '' */
 .icon-share:before { content: '\e803'; } /* '' */
 .icon-comment:before { content: '\e804'; } /* '' */
+.icon-login:before { content: '\e805'; } /* '' */
+.icon-plus:before { content: '\e806'; } /* '' */
 .icon-twitter:before { content: '\f099'; } /* '' */
 .icon-facebook:before { content: '\f09a'; } /* '' */
-.icon-login:before { content: '\e805'; } /* '' */
 .icon-angle-double-right:before { content: '\f101'; } /* '' */
 .icon-angle-left:before { content: '\f104'; } /* '' */
 .icon-angle-right:before { content: '\f105'; } /* '' */

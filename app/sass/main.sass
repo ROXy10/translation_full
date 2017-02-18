@@ -4,30 +4,31 @@
 @import "vars"
 
 *::-webkit-input-placeholder
-	color: #666
-	opacity: 1
+    color: #666
+    opacity: 1
 
 *:-moz-placeholder
-	color: #666
-	opacity: 1
+    color: #666
+    opacity: 1
 
 *::-moz-placeholder
-	color: #666
-	opacity: 1
+    color: #666
+    opacity: 1
 
 *:-ms-input-placeholder
-	color: #666
-	opacity: 1
+    color: #666
+    opacity: 1
 
 body input:focus:required:invalid,
 body textarea:focus:required:invalid
-	color: #666
+    color: #666
+
 body input:required:valid,
 body textarea:required:valid
-	color: #666
+    color: #666
 
 html, body
-	height: 100%
+    height: 100%
 
 a
     text-decoration: none
@@ -39,18 +40,18 @@ a
         color: $color-main
 
 body
-	font-size: 16px
-	min-width: 320px
-	position: relative
-	line-height: 1.75
-	font-family: $helios-regular
-	overflow-x: hidden
+    font-size: 16px
+    min-width: 320px
+    position: relative
+    line-height: 1.75
+    font-family: $helios-regular
+    overflow-x: hidden
     background-color: $color-background
 
 .img-responsive
-	display: block
-	max-width: 100%
-	height: auto
+    display: block
+    max-width: 100%
+    height: auto
 
 .btn
     display: inline-block
@@ -72,9 +73,13 @@ body
             background-color: rgba(255, 133, 50, 0.8)
             color: rgb(255, 255, 255)
 
+.content-wrapper
+    position: relative
+    padding: 0 35px
+
 .header
     border-top: 3px solid $color-main
-    padding: 21px 0 36px 0
+    padding: 21px 0 0 0
     &__navbar
         &-brand
             position: relative
@@ -82,7 +87,7 @@ body
             line-height: 1
             &-circle-green
                 position: absolute
-                left: 35px
+                left: 0
                 top: 4px
                 width: 32px
                 height: 32px
@@ -91,7 +96,7 @@ body
                 background-color: $color-sup
             &-circle-orange
                 position: absolute
-                left: 57px
+                left: 22px
                 top: 0
                 width: 40px
                 height: 40px
@@ -100,7 +105,7 @@ body
                 background-color: $color-main
             &-text
                 display: inline-block
-                margin-left: 116px
+                margin-left: 84px
                 color: rgb(0, 0, 0)
                 padding-bottom: 4px
                 border-bottom: 2px solid
@@ -158,4 +163,261 @@ body
                 &:hover, &:focus
                     color: $color-main
                     opacity: 0.8
+
+.filters
+    padding-top: 35px
+    color: rgb(255, 255, 255)
+    &__background
+        background-color: $color-main
+        -webkit-box-shadow: 0px 6px 5px 0px rgba(0, 0, 0, 0.3)
+        -moz-box-shadow: 0px 6px 5px 0px rgba(0, 0, 0, 0.3)
+        box-shadow: 0px 6px 5px 0px rgba(0, 0, 0, 0.3)
+    &__label
+        display: inherit
+        padding: 16px 0 6px 15px
+        font-size: 0.750em
+        line-height: 1
+    &__select
+        -webkit-appearance: button
+        -webkit-border-radius: 2px
+        -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1)
+        -webkit-padding-end: 20px
+        -webkit-padding-start: 2px
+        -webkit-user-select: none
+        background: url("../img/angle-arrow-down.svg") no-repeat
+        background-position: 97%
+        background-size: 24px 24px
+        background-color: rgb(255, 255, 255)
+        border: 2px solid rgb(189, 189, 189)
+        border-radius: 5px
+        color: $color-text-sup
+        display: block
+        font-size: inherit
+        height: 35px
+        overflow: hidden
+        padding: 4px 13px
+        width: 100%
+        min-width: 270px
+        &-item
+            font-weight: normal
+            display: block
+            white-space: pre
+            min-height: 1.2em
+            padding: 0px 2px 1px
+    &__arrow
+        position: absolute
+        top: 12px
+        left: 369px
+        width: 44px
+        height: 44px
+        font-size: 3em
+    &__moderator
+        padding-top: 25px
+        padding-left: 50px
+        padding-bottom: 18px
+        font-family: $avignon-book
+        line-height: 0
+        &-img
+            display: inline-block
+            border: 1px solid #ddd
+            border-radius: 4px
+            padding: 1px
+            width: 52px
+            margin-right: 8px
+            &:hover
+                box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+        &-text
+            font-size: 0.750em
+        &-link
+            font-size: 0.750em
+            text-decoration: underline
+
+.post
+    &__advertise
+        margin-top: 75px
+        text-align: right
+        &-img
+            margin-bottom: 47px
+            border: 1px solid #ccc
+    &__user
+        width: 60%
+        display: inline-block
+        margin-top: 25px
+        font-family: $avignon-book
+        &-img
+            border: 1px solid #ddd
+            border-radius: 50%
+            margin-right: 5px
+    &__view
+        width: 39%
+        text-align: right
+        display: inline-block
+        text-decoration: underline
+    &__content
+        margin-top: 6px
+        background-color: rgb(255, 255, 255)
+        border: 2px solid rgb(189, 189, 189)
+        border-radius: 5px
+        padding: 24px 24px 0 24px
+        line-height: 1.2
+        &-header
+            font-size: 1.375em
+            padding-bottom: 16px
+            border-bottom: 2px solid rgb(189, 189, 189)
+        &-comment
+            padding-top: 16px
+            font-size: 0.875em
+            color: $color-text-sup
+            &-header
+                width: 30%
+                display: block
+                text-align: right
+                padding-right: 10px
+                font-family: $avignon-book
+                float: left
+            &-text
+                width: 69%
+                text-align: left
+                display: block
+                float: left
+        &-footer
+            &-list
+                width: 30%
+                display: inline-block
+                list-style: none
+                padding-left: 0
+                &-item
+                    display: inline-block
+                &-link
+                    color: $color-text-sup
+            &-share
+                text-align: right
+                width: 69%
+                display: inline-block
+                &-link
+                    padding-right: 30px
+                    color: $color-text-sup
+                &-btn
+                    position: relative
+                    &--right
+                        padding-right: 47px
+                    &-small
+                        display: none
+                        font-size: 1.625em
+                &-icon
+                    position: absolute
+                    height: 36px
+                    right: 0
+                    top: -2px
+                    background: none
+                    font-size: 1.625em
+    &__answers
+        margin: 20px 0
+        padding-left: 24px
+        padding-right: 14px
+        border-radius: 5px
+        background-color: $color-main
+        color: rgb(255, 255, 255)
+        &-text
+            padding: 20px 0
+            float: left
+            line-height: 1.375em
+            font-size: 1.375em
+        &-icon
+            position: absolute
+            height: 36px
+            right: 0
+            top: -2px
+            background: none
+            font-size: 1.625em
+        &-btn
+            float: right
+            margin: 13px
+            position: relative
+            &--right
+                padding-right: 47px
+            &-small
+                float: right
+                display: none
+                font-size: 1.625em
+    &__line
+        border-top: 2px solid rgb(189, 189, 189)
+    &__comment
+        border-bottom: 2px solid rgb(189, 189, 189)
+        &-user
+            margin-top: 25px
+            font-family: $avignon-book
+            color: $color-text-sup
+            font-size: 0.875em
+            &-img
+                border: 1px solid #ddd
+                border-radius: 50%
+                margin-right: 5px
+        &-footer
+            &-list
+                float: left
+                list-style: none
+                padding-left: 0
+                &-item
+                    display: inline-block
+                &-link
+                    color: $color-text-sup
+            &-share-link
+                display: block
+                margin: 16px 0
+                float: right
+                color: $color-text-sup
+    &__translation
+        padding-top: 14px
+        &-textarea
+            padding: 14px
+            outline: none
+            width: 100%
+            background-color: rgb(255, 255, 255)
+            border: 2px solid rgb(189, 189, 189)
+            border-radius: 5px
+        &-text
+            width: 70%
+            float: left
+            line-height: 1
+            font-family: $avignon-book
+            color: $color-text-sup
+            font-size: 0.875em
+        &-icon
+            position: absolute
+            height: 36px
+            right: 0
+            top: -2px
+            background: none
+            font-size: 1.625em
+        &-btn
+            display: inline-block
+            float: right
+            position: relative
+            &--right
+                padding-right: 47px
+            &-small
+                float: right
+                display: none
+                font-size: 1.625em
+    &__footer
+        margin: 70px 0
+        &-menu, &-social
+            display: inline-block
+            list-style: none
+            font-size: 0.875em
+            padding: 0
+        &-menu, &-social
+            &-item
+                display: inline-block
+            &-link
+                color: $color-text-sup
+        &-menu
+            &-item
+                padding-right: 35px
+            &-link
+                text-decoration: underline
+        &-social
+            float: right
+
 @import "media"
